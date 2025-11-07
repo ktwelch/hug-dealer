@@ -5,19 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stop chasing connection, start dealing it. Join the Hug Dealer movement.">
     <title>Hug Dealer - Deal a Different Kind of Drug</title>
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hug-dealer.com/">
+    <meta property="og:title" content="Hug Dealer - Deal a Different Kind of Drug">
+    <meta property="og:description" content="Stop chasing connection, start dealing it. Join the Hug Dealer movement.">
+    <meta property="og:image" content="https://hug-dealer.com/hero.jpg">
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hug-dealer.com/">
+    <meta property="twitter:title" content="Hug Dealer - Deal a Different Kind of Drug">
+    <meta property="twitter:description" content="Stop chasing connection, start dealing it. Join the Hug Dealer movement.">
+    <meta property="twitter:image" content="https://hug-dealer.com/hero.jpg">
+    
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💛</text></svg>">
     <style>
         :root {
             --green-primary: #00A651;
-            --green-dark: #008f45;
+            --green-dark: #008F45;
             --yellow-cta: #FFE500;
-            --yellow-hover: #f5db00;
-            --dark-bg: #1a1a1a;
-            --light-bg: #f5f5f5;
-            --white: #ffffff;
-            --cream: #f8f5f0;
-            --text-dark: #2d2d2d;
-            --text-light: #666666;
+            --yellow-hover: #F5DB00;
+            --dark-bg: #1A1A1A;
+            --light-bg: #F5F5F5;
+            --text-dark: #2D2D2D;
+            --text-light: #696969;
         }
 
         * {
@@ -39,24 +50,23 @@
 
         .hero {
             position: relative;
-            min-height: 100vh;
+            min-height: 99vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: var(--white);
+            color: #FFF;
             padding: 2rem 1.5rem;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080"><rect fill="%23666" width="1920" height="1080"/><text x="50%" y="50%" font-size="48" fill="%23fff" text-anchor="middle" dominant-baseline="middle">Hero Background</text></svg>') center/cover;
-            /* TODO: Replace with optimized hero image */
+                        url('hero.jpg') center/cover;
         }
 
         .logo {
             position: absolute;
             top: 2rem;
             left: 2rem;
-            width: 100px;
+            width: 15vw;
             height: auto;
             z-index: 10;
         }
@@ -114,9 +124,9 @@
         }
 
         .scroll-arrow svg {
-            width: 48px;
-            height: 48px;
-            fill: var(--white);
+            width: 3rem;
+            height: 3rem;
+            fill: #FFF;
         }
 
         @keyframes bounce {
@@ -165,12 +175,12 @@
         }
 
         .card {
-            background: var(--white);
+            background: #FFF;
             padding: 2.5rem 2rem;
             border-radius: 8px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid var(--cream);
+            border: 2px solid #FFF;
         }
 
         .card:hover {
@@ -180,7 +190,7 @@
 
         .card.green {
             background: var(--green-primary);
-            color: var(--white);
+            color: #FFF;
             border-color: var(--green-primary);
         }
 
@@ -202,12 +212,12 @@
         .signup-section {
             padding: 4rem 1.5rem;
             background: var(--green-primary);
-            color: var(--white);
+            color: #FFF;
             text-align: center;
         }
 
         .signup-section .section-title {
-            color: var(--white);
+            color: #FFF;
             margin-bottom: 1rem;
         }
 
@@ -275,13 +285,13 @@
 
         .form-message.success {
             background: rgba(255, 255, 255, 0.2);
-            color: var(--white);
+            color: #FFF;
             display: block;
         }
 
         .form-message.error {
             background: rgba(255, 255, 255, 0.2);
-            color: var(--white);
+            color: #FFF;
             display: block;
         }
 
@@ -292,7 +302,7 @@
 
         .store-section {
             padding: 4rem 1.5rem;
-            background: var(--white);
+            background: #FFF;
         }
 
         .store-section .section-title {
@@ -315,7 +325,7 @@
 
         .footer {
             background: var(--dark-bg);
-            color: var(--white);
+            color: #FFF;
             padding: 3rem 1.5rem 2rem;
         }
 
@@ -388,7 +398,7 @@
         .social-links svg {
             width: 100%;
             height: 100%;
-            fill: var(--white);
+            fill: #FFF;
         }
 
         .footer-links {
@@ -416,7 +426,7 @@
         }
 
         .footer-column a {
-            color: var(--white);
+            color: #FFF;
             text-decoration: none;
             font-size: 0.875rem;
             opacity: 0.8;
@@ -447,13 +457,19 @@
             opacity: 0.7;
         }
 
-        @media (min-width: 768px) {
+        @media (min-aspect-ratio: 1) {
             .hero {
                 padding: 4rem 2rem;
+                min-height: 50vh !important;
             }
 
             .logo {
-                width: 140px;
+                top:.5rem;
+                left:.5rem;
+            }
+
+            .scroll-arrow {
+                bottom: .5rem;
             }
 
             .cards-container {
@@ -532,7 +548,7 @@
             }
         }
 
-        .visually-hidden {
+        .hidden {
             position: absolute;
             width: 1px;
             height: 1px;
@@ -549,7 +565,7 @@
     <main>
         <section class="hero" id="hero">
             <div class="logo">
-                <img src="logo.svg" alt="Hug Dealer" class="logo-img">
+                <img src="logo.svg" alt="Hug Dealer Logo" class="logo-img">
             </div>
             <div class="hero-content">
                 <h1>Stop Chasing Connection<br>Start Dealing It</h1>
@@ -587,10 +603,10 @@
 
         <section class="signup-section" id="signup">
             <h2 class="section-title">Get Your Fix</h2>
-            <p class="signup-subtitle">Invites to connection-rich events + occasional updates about new shirt+ways to get your fix. Expect emails once a month once we actually look forward to.</p>
+            <p class="signup-subtitle">Invites to connection-rich events + occasional updates about new shirt + ways to get your fix. Expect emails once a month that we actually look forward to.</p>
             
             <form class="signup-form" id="signupForm" novalidate>
-                <label for="email" class="visually-hidden">Enter your email</label>
+                <label for="email" class="hidden">Enter your email</label>
                 <input 
                     type="email" 
                     id="email" 
@@ -598,7 +614,7 @@
                     class="email-input" 
                     placeholder="Enter your email" 
                     required
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9][a-z0-9.-]*\.[a-z]{2,}$"
                     aria-describedby="formMessage"
                 >
                 <button type="submit" class="submit-btn">Connect Me</button>
@@ -610,12 +626,7 @@
         <section class="store-section" id="store">
             <h2 class="section-title">Get The Uniform</h2>
             <div class="store-container">
-                <iframe 
-                    src="https://hug-dealer.printful.me/" 
-                    class="store-iframe"
-                    title="Hug Dealer Store"
-                    loading="lazy"
-                ></iframe>
+                <div id='collection-component-1762499442598'></div>
             </div>
         </section>
     </main>
@@ -666,8 +677,8 @@
             
             const form = document.getElementById('signupForm');
             const emailInput = document.getElementById('email');
-            const submitBtn = form.querySelector('.submit-btn');
-            const messageDiv = document.getElementById('formMessage');
+            const subBtn = form.querySelector('.submit-btn');
+            const msgDiv = document.getElementById('formMessage');
             
             form.addEventListener('submit', async function(e) {
                 e.preventDefault();
@@ -679,41 +690,210 @@
                     return;
                 }
                 
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Submitting...';
+                subBtn.disabled = true;
+                subBtn.textContent = 'Submitting...';
                 
                 try {
                     // TODO: Integrate with Airtable API
                     // Placeholder for Airtable submission
                     await new Promise(resolve => setTimeout(resolve, 1000));
                     
-                    showMessage('Great, looking forward to connecting with you!', 'success');
-                    submitBtn.textContent = 'Connected!';
-                    
-                    setTimeout(() => {
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Connect Me';
-                    }, 3000);
-                    
+                    showMessage('Welcome, looking forward to connecting with you!', 'success');
+                    subBtn.textContent = 'Connected!';
+                    subBtn.disabled = false;
                 } catch (error) {
                     showMessage('something went wrong, email <a href="mailto:hi@hug-dealer.com?subject=Connect%20Me&body=Hi">hi@hug-dealer.com</a> to stay connected', 'error');
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Connect Me';
+                    subBtn.disabled = false;
+                    subBtn.textContent = 'Connect Me';
                 }
             });
             
             function showMessage(message, type) {
-                messageDiv.innerHTML = message;
-                messageDiv.className = 'form-message ' + type;
-                messageDiv.style.display = 'block';
+                msgDiv.innerHTML = message;
+                msgDiv.className = 'form-message ' + type;
+                msgDiv.style.display = 'block';
             }
             
             emailInput.addEventListener('input', function() {
-                if (messageDiv.style.display === 'block') {
-                    messageDiv.style.display = 'none';
+                if (msgDiv.style.display === 'block') {
+                    msgDiv.style.display = 'none';
+                }
+                const value = emailInput.value;
+                if (value.endsWith('@gma')) {
+                    emailInput.value = value.replace(/@gma$/, '@gmail.com');
+                } else if (value.endsWith('@ya')) {
+                    emailInput.value = value.replace(/@ya$/, '@yahoo.com');
+                } else if (value.endsWith('@hot')) {
+                    emailInput.value = value.replace(/@hot$/, '@hotmail.com');
                 }
             });
         })();
+    </script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: '0wyykp-kn.myshopify.com',
+          storefrontAccessToken: 'c387338b81650f667f6f01291b5f60a3',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: '484971675878',
+            node: document.getElementById('collection-component-1762499442598'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+      "product": {
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "calc(25% - 20px)",
+              "margin-left": "20px",
+              "margin-bottom": "50px",
+              "width": "calc(25% - 20px)"
+            },
+            "img": {
+              "height": "calc(100% - 15px)",
+              "position": "absolute",
+              "left": "0",
+              "right": "0",
+              "top": "0"
+            },
+            "imgWrapper": {
+              "padding-top": "calc(75% + 15px)",
+              "position": "relative",
+              "height": "0"
+            }
+          },
+          "button": {
+            "font-family": "Roboto, sans-serif",
+            ":hover": {
+              "background-color": "#009549"
+            },
+            "background-color": "#00a651",
+            ":focus": {
+              "background-color": "#009549"
+            },
+            "border-radius": "5px",
+            "padding-left": "60px",
+            "padding-right": "60px"
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        },
+        "googleFonts": [
+          "Roboto"
+        ]
+      },
+      "productSet": {
+        "styles": {
+          "products": {
+            "@media (min-width: 601px)": {
+              "margin-left": "-20px"
+            }
+          }
+        }
+      },
+      "modalProduct": {
+        "contents": {
+          "img": false,
+          "imgWithCarousel": true,
+          "button": false,
+          "buttonWithQuantity": true
+        },
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "100%",
+              "margin-left": "0px",
+              "margin-bottom": "0px"
+            }
+          },
+          "button": {
+            "font-family": "Roboto, sans-serif",
+            ":hover": {
+              "background-color": "#009549"
+            },
+            "background-color": "#00a651",
+            ":focus": {
+              "background-color": "#009549"
+            },
+            "border-radius": "5px",
+            "padding-left": "60px",
+            "padding-right": "60px"
+          }
+        },
+        "googleFonts": [
+          "Roboto"
+        ],
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "option": {},
+      "cart": {
+        "styles": {
+          "button": {
+            "font-family": "Roboto, sans-serif",
+            ":hover": {
+              "background-color": "#009549"
+            },
+            "background-color": "#00a651",
+            ":focus": {
+              "background-color": "#009549"
+            },
+            "border-radius": "5px"
+          }
+        },
+        "text": {
+          "total": "Subtotal",
+          "button": "Checkout"
+        },
+        "googleFonts": [
+          "Roboto"
+        ]
+      },
+      "toggle": {
+        "styles": {
+          "toggle": {
+            "font-family": "Roboto, sans-serif",
+            "background-color": "#00a651",
+            ":hover": {
+              "background-color": "#009549"
+            },
+            ":focus": {
+              "background-color": "#009549"
+            }
+          }
+        },
+        "googleFonts": [
+          "Roboto"
+        ]
+      }
+    },
+          });
+        });
+      }
+    })();
+    /*]]>*/
     </script>
 </body>
 </html>
