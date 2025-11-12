@@ -10,13 +10,13 @@
     <meta property="og:url" content="https://hug-dealer.com/">
     <meta property="og:title" content="Hug Dealer - Deal a Different Kind of Drug">
     <meta property="og:description" content="Stop chasing connection, start dealing it. Join the Hug Dealer movement.">
-    <meta property="og:image" content="https://hug-dealer.com/hero.jpg">
+    <meta property="og:image" content="https://hug-dealer.com/hero.webp">
     
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://hug-dealer.com/">
     <meta property="twitter:title" content="Hug Dealer - Deal a Different Kind of Drug">
     <meta property="twitter:description" content="Stop chasing connection, start dealing it. Join the Hug Dealer movement.">
-    <meta property="twitter:image" content="https://hug-dealer.com/hero.jpg">
+    <meta property="twitter:image" content="https://hug-dealer.com/hero.webp">
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💛</text></svg>">
     <style>
@@ -58,8 +58,7 @@
             text-align: center;
             color: #FFF;
             padding: 2rem 1.5rem;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('hero.jpg') center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero.webp') center/cover;
         }
 
         .logo {
@@ -84,7 +83,6 @@
 
         .hero h1 {
             font-size: clamp(2rem, 8vw, 4rem);
-            font-weight: 900;
             line-height: 1.1;
             margin-bottom: 2rem;
             text-transform: uppercase;
@@ -144,14 +142,17 @@
             }
         }
 
-        .why-section {
-            padding: 4rem 1.5rem;
+        .section {
+            padding: 2rem 1.5rem;
+            padding-bottom: 4rem;
+        }
+
+        .why {
             background: var(--light-bg);
         }
 
         .section-title {
             font-size: clamp(2rem, 6vw, 3rem);
-            font-weight: 900;
             text-align: center;
             margin-bottom: 1.5rem;
             text-transform: uppercase;
@@ -209,14 +210,13 @@
             opacity: 0.9;
         }
 
-        .signup-section {
-            padding: 4rem 1.5rem;
+        .signup {
             background: var(--green-primary);
             color: #FFF;
             text-align: center;
         }
 
-        .signup-section .section-title {
+        .signup .section-title {
             color: #FFF;
             margin-bottom: 1rem;
         }
@@ -300,12 +300,11 @@
             text-decoration: underline;
         }
 
-        .store-section {
-            padding: 4rem 1.5rem;
+        .store {
             background: #FFF;
         }
 
-        .store-section .section-title {
+        .store .section-title {
             margin-bottom: 2rem;
         }
 
@@ -536,28 +535,13 @@
             }
         }
 
-        @media (min-width: 1024px) {
-            .why-section,
-            .signup-section,
-            .store-section {
-                padding: 6rem 2rem;
-            }
-
-            .footer {
-                padding: 4rem 2rem 2rem;
-            }
-        }
-
         .hidden {
             position: absolute;
             width: 1px;
             height: 1px;
-            padding: 0;
             margin: -1px;
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
         }
     </style>
 </head>
@@ -579,7 +563,7 @@
             </a>
         </section>
 
-        <section class="why-section" id="why">
+        <section class="section why" id="why">
             <h2 class="section-title">Why?</h2>
             <p class="why-subtitle">You connect, go to events,  have great conversations. Why do you still leave feeling hungry for more?  Oxytocin and a shirt are the secret ingredients to get your fix.</p>
             
@@ -601,7 +585,7 @@
             </div>
         </section>
 
-        <section class="signup-section" id="signup">
+        <section class="section signup" id="signup">
             <h2 class="section-title">Get Your Fix</h2>
             <p class="signup-subtitle">Invites to connection-rich events + occasional updates about new shirt + ways to get your fix. Expect emails once a month that we actually look forward to.</p>
             
@@ -614,7 +598,7 @@
                     class="email-input" 
                     placeholder="Enter your email" 
                     required
-                    pattern="[a-z0-9._%+-]+@[a-z0-9][a-z0-9.-]*\.[a-z]{2,}$"
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9][a-z0-9.\-]*\.[a-z]{2,}$"
                     aria-describedby="formMessage"
                 >
                 <button type="submit" class="submit-btn">Connect Me</button>
@@ -623,7 +607,7 @@
             <div id="formMessage" class="form-message" role="alert" aria-live="polite"></div>
         </section>
 
-        <section class="store-section" id="store">
+        <section class="section store" id="store">
             <h2 class="section-title">Get The Uniform</h2>
             <div class="store-container">
                 <div id='collection-component-1762499442598'></div>
@@ -670,69 +654,10 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        (function() {
-            'use strict';
-            
-            const form = document.getElementById('signupForm');
-            const emailInput = document.getElementById('email');
-            const subBtn = form.querySelector('.submit-btn');
-            const msgDiv = document.getElementById('formMessage');
-            
-            form.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                const email = emailInput.value.trim();
-                
-                if (!emailInput.validity.valid) {
-                    showMessage('Please enter a valid email address.', 'error');
-                    return;
-                }
-                
-                subBtn.disabled = true;
-                subBtn.textContent = 'Submitting...';
-                
-                try {
-                    // TODO: Integrate with Airtable API
-                    // Placeholder for Airtable submission
-                    await new Promise(resolve => setTimeout(resolve, 1000));
-                    
-                    showMessage('Welcome, looking forward to connecting with you!', 'success');
-                    subBtn.textContent = 'Connected!';
-                    subBtn.disabled = false;
-                } catch (error) {
-                    showMessage('something went wrong, email <a href="mailto:hi@hug-dealer.com?subject=Connect%20Me&body=Hi">hi@hug-dealer.com</a> to stay connected', 'error');
-                    subBtn.disabled = false;
-                    subBtn.textContent = 'Connect Me';
-                }
-            });
-            
-            function showMessage(message, type) {
-                msgDiv.innerHTML = message;
-                msgDiv.className = 'form-message ' + type;
-                msgDiv.style.display = 'block';
-            }
-            
-            emailInput.addEventListener('input', function() {
-                if (msgDiv.style.display === 'block') {
-                    msgDiv.style.display = 'none';
-                }
-                const value = emailInput.value;
-                if (value.endsWith('@gma')) {
-                    emailInput.value = value.replace(/@gma$/, '@gmail.com');
-                } else if (value.endsWith('@ya')) {
-                    emailInput.value = value.replace(/@ya$/, '@yahoo.com');
-                } else if (value.endsWith('@hot')) {
-                    emailInput.value = value.replace(/@hot$/, '@hotmail.com');
-                }
-            });
-        })();
-    </script>
+    <script type="module" src="/src/form.js"></script>
     <script type="text/javascript">
     /*<![CDATA[*/
     (function () {
-      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
       if (window.ShopifyBuy) {
         if (window.ShopifyBuy.UI) {
           ShopifyBuyInit();
@@ -745,7 +670,7 @@
       function loadScript() {
         var script = document.createElement('script');
         script.async = true;
-        script.src = scriptURL;
+        script.src = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
         script.onload = ShopifyBuyInit;
       }
