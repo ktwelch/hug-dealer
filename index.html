@@ -52,7 +52,8 @@
 
         .hero {
             position: relative;
-            min-height: 99vh;
+            min-height: 90vh;
+            max-height: 92vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -755,6 +756,7 @@
           function loadScript() {
             var script = document.createElement('script');
             script.defer = true;
+            script.fetchPriority = 'low';
             script.src = scriptURL;
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
             script.onload = ShopifyBuyInit;
@@ -793,7 +795,7 @@
                 }
               },
               "button": {
-                "font-family": "Roboto, sans-serif",
+                "font-family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
                 ":hover": {
                   "background-color": "#009549"
                 },
@@ -812,10 +814,7 @@
             },
             "text": {
               "button": "View details"
-            },
-            "googleFonts": [
-              "Roboto"
-            ]
+            }
           },
           "productSet": {
             "styles": {
@@ -842,7 +841,7 @@
                 }
               },
               "button": {
-                "font-family": "Roboto, sans-serif",
+                "font-family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
                 ":hover": {
                   "background-color": "#009549"
                 },
@@ -855,9 +854,6 @@
                 "padding-right": "60px"
               }
             },
-            "googleFonts": [
-              "Roboto"
-            ],
             "text": {
               "button": "Add to cart"
             }
@@ -866,7 +862,7 @@
           "cart": {
             "styles": {
               "button": {
-                "font-family": "Roboto, sans-serif",
+                "font-family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
                 ":hover": {
                   "background-color": "#009549"
                 },
@@ -880,15 +876,12 @@
             "text": {
               "total": "Subtotal",
               "button": "Checkout"
-            },
-            "googleFonts": [
-              "Roboto"
-            ]
+            }
           },
           "toggle": {
             "styles": {
               "toggle": {
-                "font-family": "Roboto, sans-serif",
+                "font-family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
                 "background-color": "#00a651",
                 ":hover": {
                   "background-color": "#009549"
@@ -897,10 +890,7 @@
                   "background-color": "#009549"
                 }
               }
-            },
-            "googleFonts": [
-              "Roboto"
-            ]
+            }
           }
         },
               });
